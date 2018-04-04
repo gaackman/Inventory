@@ -1,4 +1,5 @@
 # inventory.py
+import sys
 bigBag = {'rope': 1, 'torch': 6, 'dagger': 1, 'arrow': 12}
 smallBag = {'silver coin': 50, 'gold coin': 42, 'bronze coin': 60}
 bigBagLatch = 1
@@ -39,4 +40,7 @@ if response == 'Yes' or 'yes' or 'sure':
         print('\nBoth bags are now opened.')
 else:
     print('You leave the other bag unopened.')
-    
+print('Type nothing to exit')
+ending = input()
+if ending == '':
+    sys.exit
